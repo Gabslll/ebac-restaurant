@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
-import { useParams } from "react-router-dom"
+// import { useParams } from "react-router-dom"
 import HeaderCategory from "../../components/Header/HeaderCategory"
 import RestaurantHero from "../../components/RestaurantHero/RestaurantHero"
 import ProductCard from "../../components/ProductCard/ProductCard"
@@ -15,7 +15,7 @@ import ImagemFundo from "../../assets/images/background_image.png"
 import pizza from "../../assets/images/pizza.png"
 
 const Restaurant: React.FC = () => {
-  const { id } = useParams<{ id: string }>()
+  // const { id } = useParams<{ id: string }>()
   const [cartCount, setCartCount] = useState(0)
 
   const restaurant: RestaurantType = {
