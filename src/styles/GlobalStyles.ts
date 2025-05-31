@@ -7,15 +7,18 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
-    font-family: 'amoera', sans-serif;
+  html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
     background-color: #FFF8F2;
     color: #4B4B4B;
     line-height: 1.6;
   }
 
-  html, body, #root {
-    height: 100%;
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   .App {
@@ -41,6 +44,13 @@ const GlobalStyles = createGlobalStyle`
 
   ul {
     list-style: none;
+  }
+
+  /* Ensure visibility of all components */
+  header, footer, main {
+    display: block;
+    position: relative;
+    z-index: 1;
   }
 `
 

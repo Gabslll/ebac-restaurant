@@ -1,7 +1,12 @@
 import type React from "react"
+import Header from "../../components/Header/Header"
+import Footer from "../../components/Footer/Footer"
 import FoodCard from "../../components/FoodCard/FoodCard"
-import type { FoodItem } from "../../models"
-import { HomeContainer, FoodGrid } from "./Home.styles"
+import type { FoodItem } from "../../models/FoodItem"
+import { HomeContainer, FoodGrid, MainContent } from "./Home.styles"
+
+import macarrao from "../../assets/images/macarrao.png"
+import sushi from "../../assets/images/sushi.png"
 
 const Home: React.FC = () => {
   const foodItems: FoodItem[] = [
@@ -11,7 +16,7 @@ const Home: React.FC = () => {
       rating: 4.9,
       description:
         "Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagem cuidadosa e qualidade garantida.",
-      image: "/placeholder.svg?height=217&width=472",
+      image: sushi,
       isHighlight: true,
       category: "Japonesa",
     },
@@ -21,7 +26,7 @@ const Home: React.FC = () => {
       rating: 4.6,
       description:
         "A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar.",
-      image: "/placeholder.svg?height=217&width=472",
+      image: macarrao,
       isHighlight: true,
       category: "Italiana",
     },
@@ -31,7 +36,7 @@ const Home: React.FC = () => {
       rating: 4.6,
       description:
         "A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar.",
-      image: "/placeholder.svg?height=217&width=472",
+      image: macarrao,
       isHighlight: true,
       category: "Italiana",
     },
@@ -41,7 +46,7 @@ const Home: React.FC = () => {
       rating: 4.6,
       description:
         "A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar.",
-      image: "/placeholder.svg?height=217&width=472",
+      image: macarrao,
       isHighlight: true,
       category: "Italiana",
     },
@@ -51,7 +56,7 @@ const Home: React.FC = () => {
       rating: 4.6,
       description:
         "A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar.",
-      image: "/placeholder.svg?height=217&width=472",
+      image: macarrao,
       isHighlight: true,
       category: "Italiana",
     },
@@ -61,7 +66,7 @@ const Home: React.FC = () => {
       rating: 4.6,
       description:
         "A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar.",
-      image: "/placeholder.svg?height=217&width=472",
+      image: macarrao,
       isHighlight: true,
       category: "Italiana",
     },
@@ -69,13 +74,15 @@ const Home: React.FC = () => {
 
   return (
     <HomeContainer>
-      <main>
+      <Header />
+      <MainContent>
         <FoodGrid>
           {foodItems.map((food) => (
             <FoodCard key={food.id} food={food} />
           ))}
         </FoodGrid>
-      </main>
+      </MainContent>
+      <Footer />
     </HomeContainer>
   )
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { Colors } from "../../styles/theme"
+import { Breakpoints, Colors } from "../../styles/theme"
 
 export const FooterContainer = styled.footer`
   width: 100%;
@@ -35,6 +35,13 @@ export const FooterContainer = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+    z-index: 10;
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      min-height: 150px;
+      padding: 20px;
+    }
 `
 
 export const Logo = styled.h2`
@@ -45,6 +52,12 @@ export const Logo = styled.h2`
   border: 2px solid ${Colors.black};
   display: inline-block;
   padding: 6px 12px;
+  font-family: 'amoera', sans-serif;
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
 `
 
 export const SocialIcons = styled.div`
@@ -69,6 +82,12 @@ export const SocialIcon = styled.div`
   &:hover {
     opacity: 0.8;
   }
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
 `
 
 export const Copyright = styled.p`
@@ -77,4 +96,13 @@ export const Copyright = styled.p`
   max-width: 480px;
   margin: 0 auto;
   line-height: 1.4;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 8px 12px;
+  border-radius: 4px;
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    font-size: 9px;
+    max-width: 300px;
+  }
 `
