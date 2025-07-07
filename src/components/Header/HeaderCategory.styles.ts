@@ -5,8 +5,8 @@ export const HeaderContainer = styled.header`
 width: 100%;
   height: 100%;
   --s: 100px;
-  --c1:rgb(233, 230, 229);
-  --c2:rgb(241, 233, 228);
+  --c1:rgb(250, 209, 192);
+  --c2:rgb(250, 222, 204);
   --_g: var(--c2) 6% 14%, var(--c1) 16% 24%, var(--c2) 26% 34%,
     var(--c1) 36% 44%, var(--c2) 46% 54%, var(--c1) 56% 64%, var(--c2) 66% 74%,
     var(--c1) 76% 84%, var(--c2) 86% 94%;
