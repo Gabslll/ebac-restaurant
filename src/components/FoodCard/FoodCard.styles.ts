@@ -54,6 +54,11 @@ export const Badge = styled.span`
 
 export const CategoryBadge = styled.span`
   background-color: #4a4a4a;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  left: 260px;
+  bottom: 40px;
   color: white;
   padding: 6px 10px;
   font-size: 12px;
